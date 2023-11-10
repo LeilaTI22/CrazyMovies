@@ -1,0 +1,102 @@
+.principal_descripcion {
+    padding: 100px;
+}
+
+.contenedor_nueva {
+    margin: 20px 0 0 20px;
+}
+
+.contenedor_nueva-texto {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(137, 143, 225);
+    padding: 10px;
+    transition: background-color 1s;
+}
+
+.contenedor_nueva-texto:hover {
+    background-color: rgb(24, 29, 104);
+}
+
+.contenedor_peliculas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 50px;
+}
+
+.tarjeta {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 270px;
+    text-align: center;
+    box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.65);
+}
+
+
+.tarjeta_imagen img {
+    width: 200px;
+    border-radius: 5px;
+    border-bottom: 1px solid grey;
+}
+
+.tarjeta_acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta_acciones-editar {
+    text-decoration: none;
+    color: white;
+    background-color: purple;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.tarjeta_acciones-eliminar {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.contenedor_formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.formulario {
+    height: 700px;
+}
+
+.formulario form {
+    height: 700px;
+}
+
+.formulario_input {
+    height: 75px;
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+.formulario_textarea {
+    margin-bottom: 15px;
+    resize: none;
+}
+
+.formulario_btn {
+    margin-top: 15px;
+}
+
+.contenedorImgPrueba img {
+    width: 500px;
+    border-radius: 10px;
+}

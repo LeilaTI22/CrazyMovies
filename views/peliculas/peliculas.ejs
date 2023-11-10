@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../templates/header.ejs") %>
+    <link rel="stylesheet" href="styles.css">
+
+    <section class="seccion_peliculas">
+
+        <div class="contenedor_nueva">
+            <a href="/nuevaPelicula" class="contenedor_nueva-texto">Añadir Nueva Pelicula</a>
+        </div>
+
+        <div class="contenedor_peliculas">
+
+            <%
+                pelis.forEach((pelicula, i) => {
+            %>
+
+            <div class="tarjeta">
+
+                <div class="tarjeta_imagen">
+                    <img src="/img/<%= pelicula.foto %>">
+                </div>
+
+                <div class="tarjeta_titulo">
+                    <h4><%= pelicula.titulo %></h4>
+                </div>
+
+                <div class="tarjeta_descripcion">
+                    <p><%= pelicula.descripcion %></p>
+                </div>
+
+                <div class="tarjeta_acciones">
+                    <a class="tarjeta_acciones-editar" href="/editarPelicula-<%=pelicula.id%>">Editar</a>
+                    <a class="tarjeta_acciones-eliminar" href="/borrarPelicula/<%=pelicula.id%>">Eliminar</a>
+                </div>
+
+            </div>
+
+            <%
+                });
+            %>
+
+        </div>
+
+    </section>
+
+    <%- include ("../templates/footer.ejs") %>
+</html>

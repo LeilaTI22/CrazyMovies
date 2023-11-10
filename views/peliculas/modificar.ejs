@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <%- include ("../templates/header.ejs") %>
+    <body>
+        <section class="position-relative py-4 py-xl-5">
+            <div class="contenedor_formulario">
+                <div class="formulario">
+                    <h2 class="text-center mb-4">Editar Pelicula</h2>
+                    <form action="/editarPelicula" method="post"">
+                        <input type="hidden" name="id" id="id" value="<%= pelicula.id%>">
+                        <input  id="titulo" class="form-control formulario_input" type="text" name="titulo" placeholder="Titulo" value="<%=pelicula.titulo%>" required />
+                        <textarea rows="15" id="descripcion" class="form-control formulario_textarea" type="text" name="descripcion" placeholder="Descripcion" required><%=pelicula.descripcion%></textarea>
+                        <input type="number" id="duracion" class="form-control formulario_input" name="duracion" placeholder="Duracion en Minutos: ej.125" value="<%=pelicula.duracion%>" required/>
+                        <input type="file" id="foto" class="form-control"  name="foto" required/>
+                        <button class="btn btn-primary d-block w-100 formulario_btn" type="submit">Guardar </button>
+                    </form>
+                </div>
+                <div class="contenedorImgPrueba">
+                    <img id="imgFormulario" src="#" alt="">
+                </div>
+            </div>
+        </section>
+    </body>
+    
+
+    <script src="app.js"></script>
+
+    <%- include ("../templates/footer.ejs") %>
+</html>
